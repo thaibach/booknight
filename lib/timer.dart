@@ -74,7 +74,7 @@ class _SetTimerState extends State<SetTimer> {
     CustomThemes themeData = Theme.of(context).extension<CustomThemes>()!;
     return Scaffold(
       appBar: AppBar(
-        leadingWidth: 30 ,
+        leadingWidth: 30,
         leading: Builder(
             builder: (context) => GestureDetector(
                   onTap: () {
@@ -83,7 +83,7 @@ class _SetTimerState extends State<SetTimer> {
                   child: SvgPicture.asset(
                     "assets/icons/ic_back_btn.svg",
                     width: 22,
-                  ), 
+                  ),
                 )),
         title: Text("Set timer",
             style: TextStyle(fontFamily: 'nunito', color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700)),
@@ -109,11 +109,12 @@ class _SetTimerState extends State<SetTimer> {
                           style: TextStyle(
                               fontFamily: 'nunito', color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700)),
                       NumberPicker(
+                        infiniteLoop: true,
                         itemWidth: 36,
                         axis: Axis.vertical,
                         value: _hours.toInt(),
                         minValue: 0,
-                        maxValue: 99,
+                        maxValue: 23,
                         onChanged: (value) {
                           if (!_isRunning) {
                             setState(() {
@@ -127,6 +128,7 @@ class _SetTimerState extends State<SetTimer> {
                           style: TextStyle(
                               fontFamily: 'nunito', color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700)),
                       NumberPicker(
+                        infiniteLoop: true,
                         itemWidth: 36,
                         value: _minutes.toInt(),
                         minValue: 0,
@@ -143,6 +145,7 @@ class _SetTimerState extends State<SetTimer> {
                           style: TextStyle(
                               fontFamily: 'nunito', color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700)),
                       NumberPicker(
+                        infiniteLoop: true,
                         itemWidth: 36,
                         value: _seconds.toInt(),
                         minValue: 0,

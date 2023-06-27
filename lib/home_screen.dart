@@ -226,8 +226,13 @@ class _HomeScreenViewState extends ConsumerState<HomeScreen> {
                               fontSize: 12,
                               fontWeight: FontWeight.w700)),
                       SizedBox(
-                        height: 20,
-                      ),
+                          width: 60,
+                          height: 25,
+                          child: TextField(
+                            style: TextStyle(
+                                fontFamily: 'nunito', color: Colors.black, fontSize: 12, fontWeight: FontWeight.w700),
+                            keyboardType: TextInputType.number,
+                          ))
                     ],
                   ),
                 ),

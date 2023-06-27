@@ -80,7 +80,7 @@ class ThemeChangerWidget extends StatelessWidget {
               ),
               DropdownMenuItem(
                 value: CurrentTheme.gray,
-                child: Text('gray  '),
+                child: Text('gray '),
               ),
             ],
             onChanged: (CurrentTheme? value) {
